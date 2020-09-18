@@ -1,0 +1,33 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"target": "es6",
+		"declaration": true,
+		"module": "CommonJS",
+		"outDir": "dist",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"noImplicitAny": false,
+		"strict": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"skipLibCheck": true,
+		"baseUrl": "./src",
+		"sourceMap": true,
+		"paths": {
+			"src/*": ["*"]
+		},
+		"plugins": [
+			{
+				"transform": "typescript-transform-paths"
+			},
+			{
+				"transform": "typescript-transform-paths",
+				"afterDeclarations": true
+			}
+		]
+	},
+	"include": ["src"],
+	"exclude": ["src/**/*.spec.ts"]
+}
