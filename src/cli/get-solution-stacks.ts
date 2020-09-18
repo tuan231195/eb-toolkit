@@ -1,10 +1,7 @@
 import { Application } from 'src/index';
 import { CommandModule } from 'yargs';
 
-const commandModule: CommandModule<
-	{},
-	{ platform: string; region: string }
-> = {
+const commandModule: CommandModule<{}, { platform: string; region: string }> = {
 	describe: 'get solution stacks',
 	handler: async function({ platform, region }) {
 		const application = new Application({
